@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Portfolio Kruzic Tomislav</title>
+<link rel="stylesheet" href="accueil.css">
+<link rel="icon" type="image/png" href="photo/flavicon.png">
+</head>
+<body>
+<header>
+    <div class="portfolio">
+        <a href="accueil.html">Portfolio</a>
+    </div>
+    <nav class="nav-links" id="nav-links">
+        <a href="accueil.html">Accueil</a> 
+        <a href="projets.html">Projets</a> 
+        <a href="apropos.html">À propos</a> 
+        <a href="#contact" class="smooth-scroll">Contact</a>
+    </nav>
+</header>
+
+<h1>KRUZIC TOMISLAV</h1>
+<div class="soustitre"><h2>Etudiant en seconde année de BUT Métiers du Multimédia et de l'Internet</h2></div>
+<div class="qualite">
+    <p>
+        Maîtrise de la suite Adobe<br>
+        Codage (HTML, PHP, ...)<br>
+        Communication<br>
+        Graphisme<br>
+        Cadrage<br>
+        ...
+    </p>
+</div>
+
+<div class="mouse_scroll">
+
+    <div class="mouse">
+      <div class="wheel"></div>
+    </div>
+    <div>
+      <span class="m_scroll_arrows unu"></span>
+      <span class="m_scroll_arrows doi"></span>
+      <span class="m_scroll_arrows trei"></span>
+    </div>
+</div>
+
+<hr class="custom-hr">
+<section>
+<div class="titre1"><h3>QUI JE SUIS?</h2></div>
+<div class="presentation">
+    <p>
+         Passionné par le numérique, j’ai développé des compétences solides dans 
+         la création graphique, l’audiovisuel, la communication ainsi que le 
+         développement web. J’aime explorer de nouvelles approches, allier 
+         créativité et technicité afin de donner vie à des projets originaux et 
+         percutants.</p>
+                   <img src="photo/cvportfolio.png" alt="Portrait Kruzic Tomislav">
+    
+    </section>
+    <div class="voircv"><a href="documents/CV KruzicTomislav.pdf" target="_blank">
+        Voir mon CV
+     </a></div>
+     <a href="apropos.html" class="apropos-link">À propos de moi</a>
+
+     <hr class="custom-hr">
+
+     <div class="titre1"><h3>MES PROJETS</h2></div>
+
+        <div class="lienprojet">
+            <a href="projetillustrationMMI.html">
+                <span class="projet-titre">Illustration MMI</span>
+                <span class="projet-date">20/12/24</span>
+                <span class="projet-type">Graphisme</span>
+            </a>
+        </div>
+        <div class="lienprojet">
+            <a href="Projet100silences.html">
+                <span class="projet-titre">Interview 100 Silences</span>
+                <span class="projet-date">14/11/24</span>
+                <span class="projet-type">Audiovisuel</span>
+            </a>
+        </div>
+        <div class="lienprojet">
+            <a href="projetsSkate.html">
+                <span class="projet-titre">Identité visuelle Share SkatePark</span>
+                <span class="projet-date">06/04/24</span>
+                <span class="projet-type">Design/Graphisme</span>
+            </a>
+        </div>
+        <div class="lienprojet">
+            <a href="projetsDiatome.html">
+                <span class="projet-titre">Illustration/GIF Diatome</span>
+                <span class="projet-date">19/12/24</span>
+                <span class="projet-type">Graphisme</span>
+            </a>
+        </div>
+
+        <div class="toutmesprojet">
+            <a href="projets.html">Voir tous mes projets</a>
+        </div>
+        <hr class="custom-hr">
+        <footer id="contact">
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/tomislav-kruzic-3aa522304/" target="_blank">LinkedIn</a>
+                <a href="accueil.html">Accueil</a>
+                <a href="projets.html">Projets</a>
+                <a href="apropos.html">À propos</a>
+                <a href="mailto:tomi962005@gmail.com">Mail</a>
+            </div>
+        </footer>
+        
+
+        <div class="foot">
+            <h1>KRUZIC TOMISLAV</h1>
+        </div>
+       
+       
+       
+        
+        <script>
+            let lastScrollTop = 0;
+            const header = document.querySelector('header');
+            const scrollThreshold = 5;
+            
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (Math.abs(scrollTop - lastScrollTop) <= scrollThreshold) return;
+            
+                if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight) {
+                    // Scroll vers le bas
+                    header.classList.add('header-hidden');
+                } else {
+                    // Scroll vers le haut
+                    header.classList.remove('header-hidden');
+                }
+                
+                lastScrollTop = scrollTop;
+            });
+            </script>
+
+    
+<script>
+    document.querySelectorAll('a.smooth-scroll').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); 
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth' 
+            });
+        }
+    });
+});
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.querySelector('.burger');
+      const nav = document.querySelector('.nav-links');
+    
+      burger.addEventListener('click', () => {
+          nav.classList.toggle('active');
+      });
+    });
+    </script>
+
+
+
+
+
+
+</body>
+</html>
