@@ -1,0 +1,147 @@
+<html>
+<head>
+<title>Portfolio Kruzic Tomislav</title>
+<link rel="stylesheet" href="apropos.css">
+<link rel="icon" type="image/png" href="photo/flavicon.png">
+</head>
+<body>
+<header>
+    <div class="portfolio">
+        <a href="accueil.html">Portfolio</a>
+    </div>
+    <nav class="nav-links" id="nav-links">
+        <a href="accueil.html">Accueil</a> 
+        <a href="projets.html">Projets</a> 
+        <a href="apropos.html">À propos</a> 
+        <a href="#footer" class="smooth-scroll">Contact</a>
+    </nav>
+</header>
+
+<h1>KRUZIC TOMISLAV</h1>
+
+
+<section>
+<div class="titre1"><h3>A PROPOS</h3></div>
+<div class="presentation">
+    <p>
+        Passionné par le numérique, j’ai développé des compétences solides dans 
+        la création graphique, l’audiovisuel, la communication ainsi que le 
+        développement web. J’aime explorer de nouvelles approches, allier 
+        créativité et technicité afin de donner vie à des projets originaux et 
+        percutants.</p>
+    
+    <img src="photo/cvportfolio.png" alt="Portrait Kruzic Tomislav">
+    
+    </section>
+    <div class="voircv"><a href="documents/CV KruzicTomislav.pdf" target="_blank">
+        Voir mon CV
+     </a></div>
+
+     <div class="texte2"><p>
+        Actuellement en BUT MMI, parcours Création Numérique, je me spécialise dans le design graphique et l’audiovisuel. Cette formation me permet de découvrir et de maîtriser des outils favorisant la création de projets créatifs et immersifs. Inspiré par mes passions, je puise dans l’univers du sport, des jeux vidéo, de l’animation japonaise ou encore de la culture urbaine pour enrichir mon approche visuelle et narrative. Que ce soit à travers la conception de visuels, de productions audiovisuelles ou par la création d'applications web, je cherche à allier esthétique et originalité pour capter l’attention et transmettre des émotions fortes.
+    </p></div>
+     
+
+     <div class="titre2"><h3>COMPETENCES</h3></div>
+
+     <div class="titrecompetence">
+        <div class="competence-section">
+            <h4 class="left">CREATION NUMERIQUE</h4>
+            <ul>
+                <li> Graphisme et design</li>
+                <li> Montage vidéo et animation </li>
+                <li>Photographie et retouche d’image</li>
+                <li> Création 3D </li>
+                <li> UX/UI Design</li>
+            </ul>
+        </div>
+        <div class="competence-section">
+            <h4 class="center">COMMUNICATION</h4>
+            <ul>
+                <li>Conception d’une charte graphique</li>
+                <li>Gestion de projet multimédia</li>
+                <li>Rédaction web et storytelling</li>
+                <li>Élaboration d’une stratégie digitale</li>
+                <li>Animation et gestion des réseaux sociaux</li>
+            </ul>
+        </div>
+        <div class="competence-section">
+            <h4 class="right">DEVELOPPEMENT WEB</h4>
+            <ul>
+                <li>Conception d'interface web</li>
+                <li>Hébergement d'un site web</li>
+                <li>Développement front-end dynamique</li>
+                <li>Création de sites web sous CMS</li>
+                <li>Optimisation web et accessibilité</li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+        <hr class="custom-hr">
+        <footer id="footer">
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/tomislav-kruzic-3aa522304/" target="_blank">LinkedIn</a>
+                <a href="accueil.html">Accueil</a>
+                <a href="projets.html">Projets</a>
+                <a href="apropos.html">À propos</a>
+                <a href="mailto:tomi962005@gmail.com">Mail</a>
+            </div>
+        </footer>
+        
+
+        <div class="foot">
+            <h1>KRUZIC TOMISLAV</h1>
+        </div>
+       
+       
+       
+        
+        <script>
+            let lastScrollTop = 0;
+            const header = document.querySelector('header');
+            const scrollThreshold = 5;
+            
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (Math.abs(scrollTop - lastScrollTop) <= scrollThreshold) return;
+            
+                if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight) {
+                    // Scroll vers le bas
+                    header.classList.add('header-hidden');
+                } else {
+                    // Scroll vers le haut
+                    header.classList.remove('header-hidden');
+                }
+                
+                lastScrollTop = scrollTop;
+            });
+            </script>
+
+    
+<script>
+    document.querySelectorAll('a.smooth-scroll').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault(); // Empêche le comportement par défaut du lien
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth' // Effet de défilement fluide
+                });
+            }
+        });
+    });
+</script>
+
+
+
+
+
+</body>
+</html>

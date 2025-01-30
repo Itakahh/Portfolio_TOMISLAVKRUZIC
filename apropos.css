@@ -1,0 +1,594 @@
+body {
+    margin-top: 0; 
+    padding-top: 0;
+    background-color: black;
+    color: white;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+    font-family: 'AqalaDisplayFree';
+    src: url('AqalaDisplayFree.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'AnonymousPro-Bold';
+    src: url('AnonymousPro-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'AnonymousPro-Regular';
+    src: url('AnonymousPro-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('Poppins-Regular.ttf') format('truetype');
+}
+
+header {
+    display: flex;
+    align-items: center; /* Aligner verticalement les éléments */
+    justify-content: space-between; /* Espacer les éléments horizontalement */
+    margin-top: 5px; /* Ajouter un espace en haut du header */
+}
+
+.nav-links {
+    display: flex; /* Afficher les liens par défaut */
+    flex-direction: row; /* Afficher les liens en ligne */
+    gap: 20px; /* Espacement entre les liens */
+    align-items: center; /* Aligner verticalement les liens */
+}
+
+.nav-links a,
+.portfolio a {
+    text-decoration: none; /* Enlever le soulignement */
+    color: inherit; /* Garder la couleur du texte parent */
+    font-family: 'Poppins-Regular';
+    font-size: 24px;
+    padding: 10px 10px; /* Ajouter un peu de padding pour l'espacement */
+    position: relative;
+}
+
+.nav-links a::before,
+.portfolio a::before,
+.apropos-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Rendre le soulignement plus fin */
+    border-radius: 4px;
+    background-color: #ffffff;
+    bottom: 0px; /* Placer le soulignement plus bas en dessous du texte */
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.nav-links a:hover::before,
+.portfolio a:hover::before,
+.apropos-link:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.portfolio a {
+    font-family: 'AnonymousPro-Bold'; /* Utiliser la police AnonymousPro-Bold */
+}
+
+.portfolio {
+    font-family: 'AnonymousPro-Bold';
+    font-weight: 400;
+    font-size: 24px;
+}
+
+h1 {
+    font-family: 'AqalaDisplayFree';
+    font-size: 258px;
+    letter-spacing: 8px;
+    font-weight: 100;
+    margin-top: 50px;
+    margin-bottom: -65px;
+    width: 100%; 
+    margin-left: -2; 
+    margin-right: 0;
+    text-align: left;
+}
+
+a:hover, a:focus, a:active {
+    text-decoration: none; /* Enlever le soulignement au survol, au focus et au clic */
+    color: inherit; /* Garder la couleur du texte parent */
+}
+
+a {
+    color: #ffffff;
+    position: relative;
+    text-decoration: none;
+}
+
+.titre1{
+  margin-top: 170px; /* Ajuster cette valeur pour descendre le titre */
+}
+
+.titre2{
+  margin-top: 250px; /* Ajuster cette valeur pour descendre le titre */
+}
+
+
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+   }
+  
+  
+  .mouse_scroll {
+    display: block;
+    margin: 0 auto;
+    width: 24px;
+    height: 100px;
+    margin-top: 125px;
+  }
+  
+  
+  .m_scroll_arrows
+  {
+    display: block;
+    width: 5px;
+    height: 5px;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+     
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    margin: 0 0 3px 4px;
+    
+    width: 16px;
+    height: 16px;
+  }
+  
+  
+  .unu
+  {
+    margin-top: 1px;
+  }
+  
+  .unu, .doi, .trei
+  {
+      -webkit-animation: mouse-scroll 1s infinite;
+      -moz-animation: mouse-scroll 1s infinite;
+      animation: mouse-scroll 1s infinite;
+    
+  }
+  
+  .unu
+  {
+    -webkit-animation-delay: .1s;
+    -moz-animation-delay: .1s;
+    -webkit-animation-direction: alternate;
+    
+    animation-direction: alternate;
+    animation-delay: alternate;
+  }
+  
+  .doi
+  {
+    -webkit-animation-delay: .2s;
+    -moz-animation-delay: .2s;
+    -webkit-animation-direction: alternate;
+    
+    animation-delay: .2s;
+    animation-direction: alternate;
+    
+    margin-top: -6px;
+  }
+  
+  .trei
+  {
+    -webkit-animation-delay: .3s;
+    -moz-animation-delay: .3s;
+    -webkit-animation-direction: alternate;
+    
+    animation-delay: .3s;
+    animation-direction: alternate;
+    
+    
+    margin-top: -6px;
+  }
+  
+  .mouse {
+    height: 42px;
+    width: 24px;
+    border-radius: 14px;
+    transform: none;
+    border: 2px solid white;
+    top: 170px;
+  }
+  
+  .wheel {
+    height: 5px;
+    width: 2px;
+    display: block;
+    margin: 5px auto;
+    background: white;
+    position: relative;
+    
+    height: 4px;
+    width: 4px;
+    border: 2px solid #fff;
+    -webkit-border-radius: 8px;
+            border-radius: 8px;
+  }
+  
+  .wheel {
+    -webkit-animation: mouse-wheel 0.6s linear infinite;
+    -moz-animation: mouse-wheel 0.6s linear infinite;
+    animation: mouse-wheel 0.6s linear infinite;
+  }
+  
+  @-webkit-keyframes mouse-wheel{
+     0% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+    }
+  
+    100% {
+      opacity: 0;
+      -webkit-transform: translateY(6px);
+      -ms-transform: translateY(6px);
+      transform: translateY(6px);
+    }
+  }
+  @-moz-keyframes mouse-wheel {
+    0% { top: 1px; }
+    25% { top: 2px; }
+    50% { top: 3px;}
+    75% { top: 2px;}
+    100% { top: 1px;}
+  }
+  @-o-keyframes mouse-wheel {
+  
+     0% { top: 1px; }
+    25% { top: 2px; }
+    50% { top: 3px;}
+    75% { top: 2px;}
+    100% { top: 1px;}
+  }
+  @keyframes mouse-wheel {
+  
+     0% { top: 1px; }
+    25% { top: 2px; }
+    50% { top: 3px;}
+    75% { top: 2px;}
+    100% { top: 1px;}
+  }
+  
+  @-webkit-keyframes mouse-scroll {
+  
+    0%   { opacity: 0;}
+    50%  { opacity: .5;}
+    100% { opacity: 1;}
+  }
+  @-moz-keyframes mouse-scroll {
+  
+    0%   { opacity: 0; }
+    50%  { opacity: .5; }
+    100% { opacity: 1; }
+  }
+  @-o-keyframes mouse-scroll {
+  
+    0%   { opacity: 0; }
+    50%  { opacity: .5; }
+    100% { opacity: 1; }
+  }
+  @keyframes mouse-scroll {
+  
+    0%   { opacity: 0; }
+    50%  { opacity: .5; }
+    100% { opacity: 1; }
+  }
+
+
+  .custom-hr {
+    width: 99%; /* Ajuster la largeur selon vos besoins */
+    height: 5px; /* Rendre le trait plus épais */
+    border: none;
+    background-color: white;
+    border-radius: 5px; /* Arrondir les bouts */
+    margin: 180px auto; /* Ajouter de la marge pour le positionner plus bas */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffffff; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff; 
+}
+
+h3 {
+  font-family: 'AqalaDisplayFree';
+  font-size: 129px;
+  letter-spacing: 8px;
+  font-weight: 100;
+  margin-top: -120px;
+  text-align: center;
+  
+}
+
+
+.presentation p {
+  font-family: 'Poppins-Regular';
+  font-size: 33px;
+  max-height: 50vh;         /* Ne dépasse pas la moitié de la hauteur */
+  max-width: 50vw;          /* Ne dépasse pas la moitié de la largeur */
+  overflow-y: auto;         /* Scroll vertical si nécessaire */
+  overflow-x: auto;         /* Scroll horizontal si nécessaire */
+  margin: 0;
+  padding-left: 100px;
+  
+}
+
+.presentation {
+  display: flex;             /* Alignement horizontal */
+  align-items: center;       /* Alignement vertical */
+  gap: 500px;                  /* Espace entre le texte et l'image */
+  margin-top: -20px;               
+}
+
+.presentation img {
+  width: 300px;              /* Largeur fixe pour un format carré */
+  height: 300px;             /* Hauteur fixe pour un format carré */
+  object-fit: cover;         /* Remplit le cadre sans déformer l'image */
+  border-radius: 20px;       /* Bords arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ombre légère pour du relief */
+}
+
+
+
+.voircv a {
+  color: #ffffff;
+  position: relative;
+  text-decoration: none;
+  font-family: 'Poppins-Regular'; /* Changer la police du lien */
+  padding-left: 100px;
+  font-size: 33px;
+}
+
+.voircv a::before {
+  content: '';
+  position: absolute;
+  width: 68%; /* Rendre le soulignement plus court */
+  height: 2px; /* Rendre le soulignement plus fin */
+  border-radius: 4px;
+  background-color: #ffffff;
+  bottom: -4px; /* Placer le soulignement plus bas en dessous du texte */
+  left: 33%; /* Centrer le soulignement */
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.voircv a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: transform 0.3s ease-in-out;
+  background-color: black;
+  z-index: 1000;
+}
+
+.header-hidden {
+  transform: translateY(-100%);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+main {
+  margin-top: -5px;
+  padding-bottom: 20px; /* Ajouter du padding en bas pour créer de l'espace au-dessus du footer */
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  padding-top: 10px; /* Réduisez cette valeur pour rapprocher les liens de la ligne hr */
+}
+
+.footer-links {
+  display: flex;
+  gap: 170px;
+  margin-top: -120px; /* Ajoutez une marge négative pour remonter les liens */
+}
+
+.footer-links a {
+  color: #ffffff; /* Couleur du texte */
+  text-decoration: none; /* Enlever le soulignement par défaut */
+  font-family: 'Poppins-Regular'; /* Changer la police du lien */
+  font-size: 33px; /* Taille de la police */
+  text-align: center;
+}
+
+
+hr {
+  margin-bottom: 10px; /* Réduisez cette valeur pour rapprocher la ligne des liens */
+}
+
+.footer-links a::before {
+  content: '';
+  position: absolute;
+  width: 100%; /* Rendre le soulignement plus court */
+  height: 2px; /* Rendre le soulignement plus fin */
+  border-radius: 4px;
+  background-color: #ffffff;
+  bottom: 70px; /* Placer le soulignement plus bas en dessous du texte */
+  left: 0%; /* Centrer le soulignement */
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.footer-links a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.foot h1 {
+  font-family: 'AqalaDisplayFree';
+  font-size: 196px;
+  letter-spacing: 8px;
+  font-weight: 100;
+  margin-top: -20px;
+  margin-bottom: -65px;
+  width: 100%; 
+  margin-left: -2; 
+  margin-right: 0;
+  text-align: center;
+ 
+    text-align: center;
+    margin-bottom: 20px; /* Ajuster l'espace sous le titre */
+}
+
+
+
+.footercontact {
+  display: flex;
+  justify-content: space-between; /* Espacement gauche-droite */
+  align-items: center; /* Alignement vertical */
+  width: 100%;
+  position: absolute;
+  bottom: -1556px; /* Ajustez cette valeur pour aligner avec le h1 */
+  padding-left: 350px;
+  padding-right: 350px;
+}
+
+.footercontact .linkedin,
+.footercontact .mail {
+  font-family: 'Poppins-Regular'; /* Changer la police du lien */
+  font-size: 33px; /* Taille de la police */
+}
+
+.footercontact a {
+  color: #ffffff; /* Couleur du texte */
+  text-decoration: none; /* Enlever le soulignement par défaut */
+}
+
+
+.foot h1 {
+  text-align: center;
+  margin-bottom: 20px; /* Ajouter un espace sous le h1 pour éviter qu'il soit trop collé */
+}
+
+.footercontact a::before {
+  content: '';
+  position: absolute;
+  width: 100%; /* Rendre le soulignement plus court */
+  height: 2px; /* Rendre le soulignement plus fin */
+  border-radius: 4px;
+  background-color: #ffffff;
+  bottom: -4px; /* Placer le soulignement plus bas en dessous du texte */
+  left: 0%; /* Centrer le soulignement */
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.footercontact a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.texte2{
+  font-family: 'Poppins-Regular';
+  font-size: 33px;
+  margin-top: 200px;
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+
+.titrecompetence {
+  display: flex;
+  justify-content: space-between; /* Répartir les sections à gauche, au centre et à droite */
+  align-items: flex-start; /* Alignement en haut */
+  padding: 0 100px; /* Ajouter un espace avec les bords */
+  margin-top: -50px; /* Ajuster cette valeur pour rapprocher les listes du titre */
+}
+
+.competence-section {
+  flex: 1; /* Pour répartir uniformément l'espace */
+  text-align: center; /* Centrer les titres et listes dans leur section */
+}
+
+.competence-section:first-child {
+  text-align: center; /* Aligner la première section à gauche */
+}
+
+.competence-section:last-child {
+  text-align: center; /* Aligner la dernière section à droite */
+}
+
+.titrecompetence ul {
+  list-style-type: none; /* Enlever les puces */
+  padding: 0;
+  margin-top: -50px; /* Ajouter une marge négative pour remonter les listes */
+  text-align: center;
+}
+
+.titrecompetence li {
+  font-family: 'Poppins-Regular';
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+h4 {
+  font-family: 'AqalaDisplayFree';
+  font-size: 44px;
+  letter-spacing: 6px;
+  font-weight: 100;
+
+}
+

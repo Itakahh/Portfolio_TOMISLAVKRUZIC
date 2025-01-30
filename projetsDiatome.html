@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Portfolio Kruzic Tomislav</title>
+<link rel="stylesheet" href="vueprojet1.css">
+<link rel="icon" type="image/png" href="photo/flavicon.png">
+</head>
+
+<body>
+<header>
+    <div class="portfolio">
+        <a href="accueil.html">Portfolio</a>
+    </div>
+    <nav class="nav-links" id="nav-links">
+        <a href="accueil.html">Accueil</a> 
+        <a href="projets.html">Projets</a> 
+        <a href="apropos.html">À propos</a> 
+        <a href="#contact" class="smooth-scroll">Contact</a>
+    </nav>
+</header>
+
+<h1>KRUZIC TOMISLAV</h1>
+<div class="projet-wrapper">        
+    <img src="photo/bannierediatome.png" alt="Projet 1">
+
+</div>
+
+    
+    <div class="titre1"><h3>Illustration/GIF Diatome</h3></div>
+
+    <div class="description"><p>Grâce à une opportunité unique, nous avons pu collaborer avec des entreprises partenaires du VillageBy CA. Mon groupe, composé de Julie Dorenlot, Justine Leborgne, Benjamin Haulet, Mateo Texeira et moi-même, a reçu une commande de la part de l’entreprise Diatome, un plug-in Shopify facilitant la vente de produits de seconde main. Notre mission était de concevoir une illustration destinée à être affichée sur la page d’accueil du site, afin d’illustrer clairement le fonctionnement du plug-in Diatome. Pour répondre à cette commande, nous avons réalisé plusieurs illustrations, veillant à ce qu’elles soient à la fois claires, engageantes et respectent la charte graphique de Diatome. Pour apporter plus de dynamisme, nous avons développé une version en GIF animé, ce qui permet de donner vie à l’image et de capter davantage l’attention des utilisateurs. Cette approche renforce la compréhension de l’outil tout en valorisant l’image innovante et intuitive de Diatome.
+
+        <br><a href="documents/IllustrationDiatome.pdf" target="_blank" class="styled-link">
+            Voir la présentation!
+         </a>
+         <br><a href="photo/gifchapeauv6.gif" target="_blank" class="styled-link">
+            Voir le gif en entier!
+         </a></p>
+        </div>
+
+        <div id="quad" >
+            <figure>
+                <img src="photo/illudiatome1.png" alt="Projet 1">            
+            </figure>
+            <figure>
+                <img src="photo/gifchapeauv6.gif" alt="Projet 1">              
+            </figure>
+            <figure>
+                <img src="photo/illudiatome2.png" alt="Projet 1">              
+            </figure>
+            <figure>
+                <img src="photo/illudiatome3.png" alt="Projet 1">              
+            </figure>
+          </div>
+
+
+
+    <hr class="custom-hr1">
+     <div class="titre2"><h3>AUTRES PROJETS</h3></div>
+
+
+     <div class="lienprojet">
+        <a href="projetillustrationMMI.html">
+            <span class="projet-titre">Illustration MMI</span>
+            <span class="projet-date">20/12/24</span>
+            <span class="projet-type">Graphisme</span>
+        </a>
+    </div>
+    <div class="lienprojet">
+        <a href="Projet100silences.html">
+            <span class="projet-titre">Interview 100 Silences</span>
+            <span class="projet-date">14/11/24</span>
+            <span class="projet-type">Audiovisuel</span>
+        </a>
+    </div>
+    <div class="lienprojet">
+        <a href="projetsSkate.html">
+            <span class="projet-titre">Identité visuelle Share SkatePark</span>
+            <span class="projet-date">06/04/24</span>
+            <span class="projet-type">Design/Graphisme</span>
+        </a>
+    </div>
+    <div class="lienprojet">
+        <a href="projetsDiatome.html">
+            <span class="projet-titre">Illustration/GIF Diatome</span>
+            <span class="projet-date">19/12/24</span>
+            <span class="projet-type">Graphisme</span>
+        </a>
+    </div>
+
+   
+    <hr class="custom-hr">
+    <footer id="contact">
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/tomislav-kruzic-3aa522304/" target="_blank">LinkedIn</a>
+            <a href="accueil.html">Accueil</a>
+            <a href="projets.html">Projets</a>
+            <a href="apropos.html">À propos</a>
+            <a href="mailto:tomi962005@gmail.com">Mail</a>
+        </div>
+    </footer>
+        </footer>
+
+        <div class="foot">
+            <h1>KRUZIC TOMISLAV</h1>
+        </div>
+
+
+  
+       
+       
+        
+        <script>
+            let lastScrollTop = 0;
+            const header = document.querySelector('header');
+            const scrollThreshold = 5;
+            
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (Math.abs(scrollTop - lastScrollTop) <= scrollThreshold) return;
+            
+                if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight) {
+                    // Scroll vers le bas
+                    header.classList.add('header-hidden');
+                } else {
+                    // Scroll vers le haut
+                    header.classList.remove('header-hidden');
+                }
+                
+                lastScrollTop = scrollTop;
+            });
+            </script>
+
+    
+<script>
+    document.querySelectorAll('a.smooth-scroll').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); 
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth' 
+            });
+        }
+    });
+});
+</script>
+
+
+<script>
+    var quadimages = document.querySelectorAll("#quad figure");
+for(i=0; i<quadimages.length; i++) {
+  quadimages[i].addEventListener('click', function(){ this.classList.toggle("expanded"); quad.classList.toggle("full") }); 
+}
+</script>
+
+
+
+
+</body>
+</html>

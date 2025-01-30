@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Portfolio Kruzic Tomislav</title>
+<link rel="stylesheet" href="vueprojet1.css">
+<link rel="icon" type="image/png" href="photo/flavicon.png">
+</head>
+
+<body>
+<header>
+    <div class="portfolio">
+        <a href="accueil.html">Portfolio</a>
+    </div>
+    <nav class="nav-links" id="nav-links">
+        <a href="accueil.html">Accueil</a> 
+        <a href="projets.html">Projets</a> 
+        <a href="apropos.html">À propos</a> 
+        <a href="#contact" class="smooth-scroll">Contact</a>
+    </nav>
+</header>
+
+<h1>KRUZIC TOMISLAV</h1>
+<div class="projet-wrapper">        
+    <img src="photo/banniere100silence.png" alt="Projet 1">
+
+</div>
+
+    
+    <div class="titre1"><h3>Interview 100 Silences</h3></div>
+
+    <div class="description"><p>Cette vidéo est une interview visant à informer et à sensibiliser sur les violences faites aux femmes. Elle met en lumière le cas de Rebecca Cheptegei, une athlète de haut niveau victime des ces violences dont l’histoire illustre la gravité de ces crimes et l’urgence d’en parler. L’approche adoptée est de sensibiliser le public avec un ton informatif qui cherche à interpeller et à éveiller les consciences sur cette problématique majeure. Le tournage a été réalisé en multicaméra, permettant une mise en scène dynamique, favorisant ainsi l'immersion dans le discours des intervenants. Pour renforcer l’impact visuel et illustrer les faits évoqués, des vidéos libres de droit ont été ajoutées, ce qui apporte un contexte visuel encore plus marquant. Ce choix esthétique et technique vise à rendre le message plus percutant, tout en respectant la sensibilité du sujet.<br><a href="https://youtu.be/ZoFJmsvw1D8" target="_blank" class="styled-link">
+            Voir la vidéo!
+         </a></p>
+        </div>
+
+        <div id="quad" >
+            <figure>
+                <img src="photo/photo100silence1.png" alt="Projet 1">            
+            </figure>
+            <figure>
+                <img src="photo/photo100silence2.png" alt="Projet 1">              
+            </figure>
+            <figure>
+                <img src="photo/photo100silence4.png" alt="Projet 1">              
+            </figure>
+            <figure>
+                <img src="photo/photo100silence3.png" alt="Projet 1">              
+            </figure>
+          </div>
+
+
+
+    <hr class="custom-hr1">
+     <div class="titre2"><h3>AUTRES PROJETS</h3></div>
+
+
+     <div class="lienprojet">
+        <a href="projetillustrationMMI.html">
+            <span class="projet-titre">Illustration MMI</span>
+            <span class="projet-date">20/12/24</span>
+            <span class="projet-type">Graphisme</span>
+        </a>
+    </div>
+    <div class="lienprojet">
+        <a href="Projet100silences.html">
+            <span class="projet-titre">Interview 100 Silences</span>
+            <span class="projet-date">14/11/24</span>
+            <span class="projet-type">Audiovisuel</span>
+        </a>
+    </div>
+    <div class="lienprojet">
+        <a href="projetsSkate.html">
+            <span class="projet-titre">Identité visuelle Share SkatePark</span>
+            <span class="projet-date">06/04/24</span>
+            <span class="projet-type">Design/Graphisme</span>
+        </a>
+    </div>
+    <div class="lienprojet">
+        <a href="projetsDiatome.html">
+            <span class="projet-titre">Illustration/GIF Diatome</span>
+            <span class="projet-date">19/12/24</span>
+            <span class="projet-type">Graphisme</span>
+        </a>
+    </div>
+
+   
+    <hr class="custom-hr">
+    <footer id="contact">
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/tomislav-kruzic-3aa522304/" target="_blank">LinkedIn</a>
+            <a href="accueil.html">Accueil</a>
+            <a href="projets.html">Projets</a>
+            <a href="apropos.html">À propos</a>
+            <a href="mailto:tomi962005@gmail.com">Mail</a>
+        </div>
+    </footer>
+        </footer>
+
+        <div class="foot">
+            <h1>KRUZIC TOMISLAV</h1>
+        </div>
+
+
+  
+       
+       
+        
+        <script>
+            let lastScrollTop = 0;
+            const header = document.querySelector('header');
+            const scrollThreshold = 5;
+            
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (Math.abs(scrollTop - lastScrollTop) <= scrollThreshold) return;
+            
+                if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight) {
+                    // Scroll vers le bas
+                    header.classList.add('header-hidden');
+                } else {
+                    // Scroll vers le haut
+                    header.classList.remove('header-hidden');
+                }
+                
+                lastScrollTop = scrollTop;
+            });
+            </script>
+
+    
+<script>
+    document.querySelectorAll('a.smooth-scroll').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); 
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth' 
+            });
+        }
+    });
+});
+</script>
+
+
+<script>
+    var quadimages = document.querySelectorAll("#quad figure");
+for(i=0; i<quadimages.length; i++) {
+  quadimages[i].addEventListener('click', function(){ this.classList.toggle("expanded"); quad.classList.toggle("full") }); 
+}
+</script>
+
+
+
+
+</body>
+</html>

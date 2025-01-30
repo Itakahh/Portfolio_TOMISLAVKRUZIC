@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Portfolio Kruzic Tomislav</title>
+<link rel="stylesheet" href="projet.css">
+<link rel="icon" type="image/png" href="photo/flavicon.png">
+</head>
+<body>
+<header>
+    <div class="portfolio">
+        <a href="accueil.html">Portfolio</a>
+    </div>
+    <nav class="nav-links" id="nav-links">
+        <a href="accueil.html">Accueil</a> 
+        <a href="projets.html">Projets</a> 
+        <a href="apropos.html">À propos</a> 
+        <a href="#contact" class="smooth-scroll">Contact</a>
+    </nav>
+</header>
+
+<h1>KRUZIC TOMISLAV</h1>
+  
+
+     <div class="titre1"><h3>PROJETS</h3></div>
+
+     <div class="projet-wrapper">
+   
+            <a href="ProjetillustrationMMI.html" class="animimage">
+                <img src="photo/bannièremmi.png" alt="Projet 1">
+            </a>
+            <a href="ProjetillustrationMMI.html" class="projet-link">Illustration MMI</a> 
+        </div>
+    
+        <div class="projet-wrapper">
+            <a href="Projet100silences.html" class="animimage">
+                <img src="photo/banniere100silence.png" alt="Projet 2">
+            </a>
+            <a href="Projet100silences.html" class="projet-link">Interview 100 Silences</a>
+        </div>
+    </div>
+
+    <div class="projet-wrapper">
+       
+            <a href="projetsSkate.html" class="animimage">
+                <img src="photo/banniereskatepark.png" alt="Projet 1">
+            </a>
+            <a href="projets.html" class="projet-link">Identité visuelle Share SkatePark</a>
+        </div>
+
+        <div class="projet-wrapper">
+            <a href="projetsDiatome.html" class="animimage">
+                <img src="photo/bannierediatome.png" alt="Projet 2">
+            </a>
+            <a href="projetsDiatome.html" class="projet-link">Illustration/GIF Diatome</a>
+        </div>
+    </div>
+
+
+
+     <div class="titre2"><h3>AUTRES PROJETS</h3></div>
+
+        <div class="lienprojet">
+            <a href="projet3d.html">
+                <span class="projet-titre">Modélisation barre de bateau en 3D</span>
+                <span class="projet-date">13/11/24</span>
+                <span class="projet-type">Blender/3D</span>
+            </a>
+        </div>
+        <div class="lienprojet">
+            <a href="projetsmarlow.html">
+                <span class="projet-titre">Film noir Marlow</span>
+                <span class="projet-date">12/02/24</span>
+                <span class="projet-type">Audiovisuel</span>
+            </a>
+        </div>
+        <div class="lienprojet">
+            <a href="projetsphoto.html">
+                <span class="projet-titre">Gallerie Photographie</span>
+                <span class="projet-date">13/10/23</span>
+                <span class="projet-type">Photographie/Retouche</span>
+            </a>
+        </div>
+        <div class="lienprojet">
+            <a href="projetsherault.html">
+                <span class="projet-titre">Dashboard Accident Hérault</span>
+                <span class="projet-date">22/12/24</span>
+                <span class="projet-type">Développment web/PHP</span>
+            </a>
+        </div>
+
+        
+        <hr class="custom-hr">
+        <footer id="contact">
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/tomislav-kruzic-3aa522304/" target="_blank">LinkedIn</a>
+                <a href="accueil.html">Accueil</a>
+                <a href="projets.html">Projets</a>
+                <a href="apropos.html">À propos</a>
+                <a href="mailto:tomi962005@gmail.com">Mail</a>
+            </div>
+        </footer>
+
+        <div class="foot">
+            <h1>KRUZIC TOMISLAV</h1>
+        </div>
+       
+       
+       
+        
+        <script>
+            let lastScrollTop = 0;
+            const header = document.querySelector('header');
+            const scrollThreshold = 5;
+            
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (Math.abs(scrollTop - lastScrollTop) <= scrollThreshold) return;
+            
+                if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight) {
+                    // Scroll vers le bas
+                    header.classList.add('header-hidden');
+                } else {
+                    // Scroll vers le haut
+                    header.classList.remove('header-hidden');
+                }
+                
+                lastScrollTop = scrollTop;
+            });
+            </script>
+
+    
+<script>
+    document.querySelectorAll('a.smooth-scroll').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); 
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth' 
+            });
+        }
+    });
+});
+</script>
+
+
+
+
+
+</body>
+</html>
